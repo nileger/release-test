@@ -16,6 +16,9 @@ jobs:
         distribution: 'temurin'
         settings-path: ${{ github.workspace }}
 
+    - name: List files
+      run: echo "$(ls)"        
+
     - name: Mvn install
       run: mvn -B clean install -Dmaven.test.skip=true
 
